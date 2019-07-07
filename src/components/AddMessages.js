@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Button, Form, FormGroup, Label, Input,
 } from 'reactstrap';
+import './Welcome.css';
 
 class AddMessages extends Component {
   constructor(props) {
@@ -39,39 +40,43 @@ class AddMessages extends Component {
     const { status, content } = this.state;
     return (
       <div>
-        <Form>
+        <Form className="textmessage">
           <FormGroup>
             <Label for="Text">Write a message :</Label>
             <Input type="textarea" name="text" id="Text" onChange={this.onChange} value={content} />
           </FormGroup>
         </Form>
-        <FormGroup check>
-          <Label check>
-            <Input
-              type="radio"
-              name="radio1"
-              onChange={this.onChangeRadio}
-              checked={status === 'public'}
-              value="public"
-            />
-            {' '}
+
+        <Form>
+          <Label for="radio">Status :</Label>
+          <FormGroup check>
+            <Label check>
+              <Input
+                type="radio"
+                name="radio1"
+                onChange={this.onChangeRadio}
+                checked={status === 'public'}
+                value="public"
+              />
+              {' '}
              public
-          </Label>
-        </FormGroup>
-        <FormGroup check>
-          <Label check>
-            <Input
-              type="radio"
-              name="radio1"
-              onChange={this.onChangeRadio}
-              checked={status === 'privé'}
-              value="privé"
-            />
-            {' '}
-              privé
-          </Label>
-        </FormGroup>
-        <Button color="info" type="submit" onClick={this.onSubmit}>Send my message</Button>
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input
+                type="radio"
+                name="radio1"
+                onChange={this.onChangeRadio}
+                checked={status === 'private'}
+                value="private"
+              />
+              {' '}
+              private
+            </Label>
+          </FormGroup>
+        </Form>
+        <Button className="bouton" color="info" type="submit" onClick={this.onSubmit}>Send my message</Button>
 
       </div>
     );

@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import AddMessages from './AddMessages';
 import ListMessages from './ListMessages';
-import './Welcome.css';
 
 class Welcome extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      messages: [],
+      messages: [
+        {
+          content: 'My first message',
+          status: 'private',
+        },
+      ],
     };
   }
 
@@ -16,13 +20,23 @@ class Welcome extends Component {
     this.setState({ messages: [...messages, message] });
   }
 
+  deleteMessage = (message) => {
+    const { messages } = this.state;
+    const deleted = messages;
+    const index = deleted.indexOf(message);
+    deleted.splice(index, 1);
+    this.setState({
+      messages: deleted,
+    });
+  }
+
   render() {
     const { messages } = this.state;
     return (
       <div>
-        <h1>Welcome to my messages app !</h1>
-        <AddMessages className="add" addMessage={this.addMessage} />
-        <ListMessages className="list" messages={messages} />
+        <h1 className="titre">Welcome to my messages app !</h1>
+        <AddMessages addMessage={this.addMessage} />
+        <ListMessages messages={messages} deleteMessage={this.deleteMessage} />
       </div>
     );
   }
