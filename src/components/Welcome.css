@@ -1,24 +1,24 @@
 .list{
-  margin-top: 1em;
-  margin-left: 8em;
-  margin-right: 8em;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .bouton{
-  margin-top: 1em;
+  margin-top: 2%;
 }
 
 .textmessage{
-  margin-left: 8em;
-  margin-right: 8em;
-  margin-top: 2em;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
 }
 
 .delete{
-  margin-left: 3em;
+  margin-left: 3%;
   padding: 0 0.5em 0 0.5em !important;
 }
 
 .titre{
-  margin-top: 1em;
+  margin-top: 2%;
 }
