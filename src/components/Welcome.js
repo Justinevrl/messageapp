@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddMessages from './AddMessages';
 import ListMessages from './ListMessages';
+// import axios from 'axios';
 
 class Welcome extends Component {
   constructor(props) {
@@ -14,6 +15,15 @@ class Welcome extends Component {
       ],
     };
   }
+
+  // Exemple avec une requête GET :
+  // componentDidMount = () => {
+  //   axios.get('http://www.example.com/messages')
+  //     .then((res) => {
+  //       const messages = res.data;
+  //       this.setState({ messages });
+  //     });
+  // }
 
   addMessage = (message) => {
     const { messages } = this.state;
