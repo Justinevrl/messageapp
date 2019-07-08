@@ -3,6 +3,7 @@ import {
   Button, Form, FormGroup, Label, Input,
 } from 'reactstrap';
 import './Welcome.css';
+// import axios from 'axios';
 
 class AddMessages extends Component {
   constructor(props) {
@@ -21,6 +22,14 @@ class AddMessages extends Component {
       content: '',
     });
     addMessage({ content, status });
+
+    // Exemple avec une requête POST :
+    // axios.post(`https://example.com/messages`, { content }, { status })
+    // .then(res => {
+    //   console.log(res);
+    //   console.log(res.data);
+    // })
+    // }
   }
 
   onChange = (event) => {

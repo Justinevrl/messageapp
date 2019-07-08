@@ -4,7 +4,6 @@ import {
 } from 'reactstrap';
 import './Welcome.css';
 
-
 const ListMessages = ({ messages, deleteMessage }) => (
   <div className="list">
     <ListGroup>
