@@ -1,0 +1,24 @@
+.list{
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.bouton{
+  margin-top: 2%;
+}
+
+.textmessage{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.delete{
+  margin-left: 3%;
+  padding: 0 0.5em 0 0.5em !important;
+}
+
+.titre{
+  margin-top: 2%;
+}
