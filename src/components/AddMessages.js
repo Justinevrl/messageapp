@@ -24,7 +24,7 @@ class AddMessages extends Component {
     addMessage({ content, status });
 
     // Exemple avec une requête POST :
-    // axios.post(`https://example.com/messages`, { content }, { status })
+    // axios.post(`https://example.com/messages`, { content, status })
     // .then(res => {
     //   console.log(res);
     //   console.log(res.data);
